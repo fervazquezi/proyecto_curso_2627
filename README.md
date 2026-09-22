@@ -12,3 +12,6 @@ Algunas app de referencias son las ligas fantasy de football.
 
 # Lenguajes
 Usaré Python como lenguaje para realizar el proyecto
+
+# Documentación adicional
+Captura de la configuración de Git: [ver aquí](docs/config_git.png)
