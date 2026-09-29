@@ -1,36 +1,33 @@
 # proyecto_curso_2627
 
 # Problema a resolver:
-Mis amigos y yo actualmente usamos Excel para hacer una especie de liga entre todos, en la que tenemos que acertar los resultados de los partidos del mundial de futbol, 
-ganando el que mas resultados haya acertado a lo largo del torneo. El problema es que manejar Excel para poner los resultados de cada partido es muy tedioso y largo, ademas de que solo 
-la persona que ha creado el excel puede ver los resultados en tiempo real, mientras que el resto de participantes tienen que esperar a que se les pase una foto de la tabla para ver su posicion en ella, y el sistema de puntuacion por acertar resultados en el Excel es muy basico y rudimentario, sin margen de personalizar el sistema de puntuacion para cada torneo, por ejemplo, que da los mismos puntos por acertar un resultado obvio que uno improbable, o que no diferencia a quien acierta muchas veces seguidas de quien acierta de forma aislada.
+Soy un estudiante universitario, y como tal a menudo suelo ir bastante justo de dinero. Usar el transporte publico todos los dias, puede suponer un gasto importante a final de mes. Se que hay distintas opciones (billetes sencillos, bonos de 10 viajes, abonos mensuales por zonas, descuentos de joven o de familia numerosa,...)  que pueden abaratar el uso del transporte publico, pero no se cual me renta usar teniendo en cuenta que hay periodos en los que no voy a clase ya sea porque hay vacaciones o varios dias festivos consecutivos y si en verdad el descuento que estoy usando me permite el menor coste posible o existe otro que me es mas barato.
 ![Tarjeta del rol de cliente](tarjeta_rol_cliente.jpg)
 ![Nota del rol de profesional](tarjeta_rol_profesional.jpg)
 
 # Datos del problema
 
 ## Introduccion de datos
+Los datos se obtienen y procesan directamente de del calendario de la universidad y la pagina web  del metro y buses interubanos:
 
-Los usuarios deberan introducir los resultados exactos, indicando:
--La cantidad de grupos maximo que van a haber en el torneo inicialmente
--La cantidad de equipos maximo que hay por grupo
--Intoducir en cada grupo los equipos correspondientes
--El resultado numerico de cada partido
--En caso de un empate, elegir un ganador obligatoriamente para que pase a la siguiente fase.
+https://secretariageneral.ugr.es/sites/webugr/secretariageneral/public/ficheros/puntoCGh_calendarioacademico2627.pdf pEs el calendario académico oficial del curso 2026/2027 para grados de la ugr
 
-Los datos para comprobar los resultados y cruces reales estan disponible en la web de la FIFA: https://www.fifa.com/es/tournaments/mens/worldcup/canadamexicousa2026/standings
+Tarifas de autobús interurbano: http://www.movilidadgranada.com/bus_tarifas.php Contiene una tabla con el concepto de cada título de transporte (billete  ordinario, Credibús, Bono Joven, Bono Mensual...) y su coste en euros
+
+https://metropolitanogranada.es/tarifas Contiene varias tabla con los tipos de tarjeta, su precio y las condiciones de uso
 
 ## procesamiento
-Segun los resultados puestos pasaran unos equipos u otros a la siguiente fase. Los cruces en la siguiente fase dependen del grupo en el que se encuentra ese equipo, y de la posicion en la que ha quedado en dicho grupo. El Excel no calcula los cruces de la siguiente fase, por lo que se tienen que meter a mano los cruces en cada fase. Se quiere procesar autmaticamente los cruces segun se vayan rellenando los resultados de los partidos. Y se quiere procesar tambien las rachas de aciertos consecutivos poniendo un mutliplicador de puntos que vaya aumentando con la racha y que resultados que hayan puesto poca gente den mas puntos en funcion de la probabilidad en caso de acierto. Asi los resultados poco probables dan mas puntos 
+No basta con coger la tarifa más barata de percio, hay que ver si esa tarifa se adecua a la situcion academica de ese momento, es posible que un bono mensual salga mas barato que otras tarifas, pero si la mitad de ese mes no hay clases porque dan vacaciones y no voy a usar el transporte publico, es posible que rente mirar otras opciones que hagan que me salga mas barato en vez de paga un bono de un mes entero que puede caducar sin haberlo gastado. Además de que existen algunas tarifas con restricciones (edad, empadronamiento, disponibilidad...) que hay que comprobar antes de poder elegir esa tarifa. Es necesario calcular el del coste mínimo óptimo de billetes dados y el numero días de clase y festivos y con las retricciones .
 
 ## Despliegue en la nube
-Para ver tu posicion en la tabla de clasificacion con respecto a tus amigos en tiempo real se necesita despliegue en la nube
+Como es posible que durante el curso haya cambios tanto en el calendario (que haya huelga y no haya clase, o haya un evento en la facultad, ...) como en las tarifas ( que cambien el precio de la tarifa, que ya no esta disponible dicha tarifa, ...) no basta con calcular una vez al principio, es necesario que se comprueben los horarios y las tarifas por si hay cambios inesperados
 
 # Referencias
-Algunas app de referencias son las ligas fantasy de football.
+Algunas aplicaciones de referncia son Cittymaper o Omio
 
 # Lenguajes
 Usare Python como lenguaje para realizar el proyecto
 
 # Documentacion adicional
 Captura de la configuracion de Git: [ver aqui](docs/config_git.png)
+Captura de la clave ssh: [ver aqui](docs/ssh.png)
